@@ -14,7 +14,7 @@ const ItemCard = ({ item }) => {
     } = item
 
     return (
-        <div className="flex justify-between items-center">
+        <div className="flex  items-center text-xs">
             <img style={{borderRadius:"0px 200px 200px 200px"}} className="w-20" src={image} alt="" />
 
             {/* title + price + description content  */}
@@ -22,7 +22,7 @@ const ItemCard = ({ item }) => {
             <div className="px-4">
 
                 <div className="flex justify-between items-center">
-                    <h2 className="uppercase font-semibold">{name}---------------</h2>
+                    <h2 className="uppercase font-semibold">{name}-------------------------------------------</h2>
                     <p className="text-[#D99904]">${price}</p>
                 </div>
 

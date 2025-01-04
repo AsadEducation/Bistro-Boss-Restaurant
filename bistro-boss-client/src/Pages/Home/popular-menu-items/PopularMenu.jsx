@@ -6,7 +6,7 @@ import useMenu from "../../../Hooks/useMenu";
 
 const PopularMenu = () => {
 
-    const [items, loading] = useMenu("popular")
+    const [items, loading] = useMenu("popular");
 
 
     return (

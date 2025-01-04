@@ -10,7 +10,7 @@ const useMenu = (category) => {
 
     const [items, setItems] = useState([]);
 
-    const [loading,setLoading]= useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
 
@@ -18,14 +18,21 @@ const useMenu = (category) => {
             .then(res => res.json())
             .then(data => {
 
-                const popular = data.filter((each) => each.category === passedCategory);
+                let popular;
+                if (passedCategory) {
+                    
+                    popular = data.filter((each) => each.category === passedCategory);
+                }
+                else {
+                    popular = data;
+                }
                 // console.log(popular);
                 setItems(popular);
                 setLoading(false);
             })
     }, [])
 
-    return [items,loading];
+    return [items, loading];
 
 };
 
